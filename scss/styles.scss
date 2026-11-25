@@ -1,0 +1,257 @@
+// Colores
+$fondo: #f5f5f5;
+$blanco: #ffffff;
+$rojo: #b83c3c;
+$oscuro: #252525;
+$gris: #666666;
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: $fondo;
+    color: $oscuro;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+header, footer {
+    background: $oscuro;
+    color: $blanco;
+}
+.barra {
+    max-width: 1100px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: $blanco;
+    text-decoration: none;
+
+    span {
+        color: #ef7777;
+    }
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    a {
+        color: $blanco;
+        text-decoration: none;
+
+        &:hover, &[aria-current="page"] {
+            text-decoration: underline;
+        }
+    }
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1100px;
+    padding: 24px;
+    margin: 0 auto;
+    flex: 1;
+}
+section {
+    margin-bottom: 32px;
+}
+h1 {
+    font-size: 30px;
+    margin: 0 0 12px;
+}
+h2 {
+    font-size: 23px;
+    margin: 0 0 14px;
+}
+p {
+    margin: 0 0 12px;
+}
+.bienvenida {
+    text-align: center;
+    padding: 28px 0 16px;
+}
+.buscador {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+input {
+    min-width: 0;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font: inherit;
+    background: $blanco;
+}
+button, .boton {
+    display: inline-block;
+    border: 0;
+    border-radius: 5px;
+    padding: 9px 14px;
+    background: $rojo;
+    color: $blanco;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.15s;
+
+    &:hover {
+        background: #963030;
+    }
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+// Tarjetas
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 18px;
+}
+.tarjeta {
+    background: $blanco;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px #0000000d;
+
+    img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        background: #e5e5e5;
+    }
+
+    &-contenido {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 8px;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+    p {
+        font-size: 14px;
+        color: $gris;
+        margin: 0;
+    }
+
+    .boton {
+        margin-top: auto;
+    }
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0;
+}
+.detalle {
+    display: grid;
+    grid-template-columns: minmax(180px, 260px) 1fr;
+    gap: 24px;
+    background: $blanco;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.portada {
+    width: 100%;
+    border-radius: 4px;
+}
+.volver {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: $rojo;
+}
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 12px;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin: 0;
+}
+footer {
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+
+    a {
+        color: $blanco;
+    }
+
+    p {
+        margin: 4px;
+    }
+}
+
+[hidden] {
+    display: none !important;
+}
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+:focus-visible {
+    outline: 3px solid #2866b1;
+    outline-offset: 3px;
+}
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 16px;
+    }
+    .barra {
+        justify-content: center;
+        padding: 12px;
+    }
+    .tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+    .detalle {
+        grid-template-columns: 1fr;
+        padding: 14px;
+    }
+    .portada {
+        max-width: 240px;
+        margin: auto;
+    }
+    h1 {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Favoritos | AniVerse</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- Menú de navegación -->
+        <header>
+            <div class="barra">
+                <a class="logo" href="index.html">Ani<span>Verse</span></a>
+                <nav aria-label="Navegación principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="explorar.html">Explorar</a>
+                    <a href="favoritos.html" aria-current="page">Favoritos</a>
+                </nav>
+            </div>
+        </header>
+        <main class="contenedor">
+            <section>
+                <h1>Mis favoritos</h1>
+                <p>Los animes que guardes aparecerán aquí. Tu lista se conserva en este navegador.</p>
+                <p id="estado-favoritos" role="status">
+                </p>
+                <div id="favoritos" class="tarjetas">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>© 2026 AniVerse | Proyecto EBAC</p>
+            <p>Datos de <a href="https://kitsu.app/" target="_blank" rel="noopener noreferrer">Kitsu API</a>.</p>
+        </footer>
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/comunes.js"></script>
+        <script src="js/favoritos.js"></script>
+    </body>
+</html>

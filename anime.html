@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalles | AniVerse</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- Menú de navegación -->
+        <header>
+            <div class="barra">
+                <a class="logo" href="index.html">Ani<span>Verse</span></a>
+                <nav aria-label="Navegación principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="explorar.html">Explorar</a>
+                    <a href="favoritos.html">Favoritos</a>
+                </nav>
+            </div>
+        </header>
+        <main class="contenedor">
+            <a class="volver" href="explorar.html">← Volver a explorar</a>
+            <section>
+                <h1>Información del anime</h1>
+                <p id="estado-detalle" role="status">Cargando información...</p>
+                <article id="detalle" class="detalle" hidden>
+                    <img id="portada" class="portada" alt="">
+                    <div>
+                        <h2 id="titulo">
+                        </h2>
+                        <p id="titulo-japones">
+                        </p>
+                        <dl id="datos">
+                        </dl>
+                        <button id="guardar">Guardar en favoritos</button>
+                        <p id="estado-favorito" role="status">
+                        </p>
+                        <h3>Sinopsis</h3>
+                        <p id="sinopsis">
+                        </p>
+                        <a id="enlace-mal" target="_blank" rel="noopener noreferrer" hidden>Ver en Kitsu</a>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p>© 2026 AniVerse | Proyecto EBAC</p>
+            <p>Datos de <a href="https://kitsu.app/" target="_blank" rel="noopener noreferrer">Kitsu API</a>.</p>
+        </footer>
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/comunes.js"></script>
+        <script src="js/anime.js"></script>
+    </body>
+</html>
